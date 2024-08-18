@@ -146,7 +146,7 @@ docker-compose down
 ```
 tail ~/.ssh/id_rsa.pub
 ```
-Copy entire output and paste to https://my.gitlab:3143/profile/keys
+Copy entire output and paste to https://my.gitlab:3143/-/user_settings/ssh_keys
 
 ## Create New project
 
@@ -175,6 +175,7 @@ Copy entire output and paste to https://my.gitlab:3143/profile/keys
     ```
 
 ## Register New Runner
+**Note** Support for registration tokens is deprecated
 
 * [Gitlab Runner commands](https://docs.gitlab.com/runner/commands/)
 

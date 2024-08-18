@@ -77,6 +77,8 @@ It's important that you [choose(and expose) a port](#ports) that's different tha
 
 [Follow Steps 1-5 for generating a self-signed certificate](https://github.com/GetchaDEAGLE/gitlab-https-docker#generating-a-self-signed-certificate)
 
+**Note** `SAN` is required in modern browsers
+
 Then copy the certificate to your persistent docker volumes
 ```
 sudo mkdir -p /srv/gitlab/ssl
@@ -104,12 +106,14 @@ To set the hostname you want to forward to on your local machine
 ```
 sudo nano /etc/hosts
 ```
+**Note** Windows: `C:\Windows\System32\drivers\etc\hosts`
 
 add the following line at the bottom:
 
 ```
 127.0.0.1       my.gitlab
 ```
+**Note** Clash Verge: dns/use-system-hosts=true
 
 ## Docker Compose Control
 
